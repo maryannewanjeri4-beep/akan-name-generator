@@ -57,7 +57,20 @@ label {
   margin-bottom: 4px;
   color: #6b6a63;
 }
+ input,
+select {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #d3d1c7;
+  border-radius: 6px;
+}
  
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0f6e56;
+}
 
 
  
