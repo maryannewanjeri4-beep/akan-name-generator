@@ -25,6 +25,7 @@ form.addEventListener("submit"), function (event) {
   // Stop the page from refreshing, which is what forms do by default
   event.preventDefault();
   
+  //parseInt is used to convert data
   const day = parseInt(document.getElementById("day").value);
   const month = parseInt(document.getElementById("month").value);
   const year = parseInt(document.getElementById("year").value);
@@ -82,6 +83,14 @@ function calculateDayOfWeek(day, month, year) {
  
   return dayOfWeek;
 }
+function showResult(name, weekday) {
+  resultDay.textContent = "Born on a " + weekday;
+  resultName.textContent = name;
+ 
+  // The result box starts hidden in the CSS, so we reveal it here
+  resultBox.style.display = "block";
+}
+ 
  
 
  
