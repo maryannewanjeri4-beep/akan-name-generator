@@ -60,4 +60,28 @@ function validateInput(day, month, year, gender) {
 }
 
 
+function calculateDayOfWeek(day, month, year) {
+  if (month === 1 || month === 2) {
+    month = month + 12;
+    year = year - 1;
+  }
+ 
+  const century = Math.floor(year / 100);
+  const yearInCentury = year % 100;
+ 
+  const rawResult =
+    Math.floor(century / 4) -
+    (2 * century) +
+    yearInCentury +
+    Math.floor(yearInCentury / 4) +
+    Math.floor((26 * (month + 1)) / 10) +
+    day;
+ 
+  const zellerResult = ((rawResult % 7) + 7) % 7;
+  const dayOfWeek = (zellerResult + 6) % 7;
+ 
+  return dayOfWeek;
+}
+ 
+
  
