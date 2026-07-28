@@ -71,6 +71,41 @@ select:focus {
   outline: none;
   border-color: #0f6e56;
 }
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  background-color: #0f6e56;
+  color: #ffffff;
+  font-size: 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+ 
+button:hover {
+  background-color: #085041;
+}
+ 
+.result {
+  display: none;
+  margin-top: 18px;
+  background-color: #e1f5ee;
+  border-radius: 8px;
+  padding: 14px 16px;
+  text-align: center;
+}
+ 
+.result p {
+  margin: 0;
+}
+ 
+.result .name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #085041;
+  margin-top: 4px;
+}
 
 
  
