@@ -11,6 +11,42 @@
       <p class="description">
         Akan tradition names every child for the day of their birth. Enter your details to find yours.
       </p>
+      <form id="akan-form">
+        <div class="row">
+          <div class="field">
+            <label for="day">Day</label>
+            <input type="number" id="day" placeholder="15">
+          </div>
+          <div class="field">
+            <label for="month">Month</label>
+            <input type="number" id="month" placeholder="08">
+          </div>
+          <div class="field">
+            <label for="year">Year</label>
+            <input type="number" id="year" placeholder="1998">
+          </div>
+        </div>
+ 
+        <div class="field">
+          <label for="gender">Gender</label>
+          <select id="gender">
+            <option value="">Select gender</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+          </select>
+        </div>
+ 
+        <button type="submit">Reveal my name</button>
+      </form>
+ 
+      <div class="result" id="result">
+        <p class="day" id="result-day"></p>
+        <p class="name" id="result-name"></p>
+      </div>
+    </div>
+    <div class="stripe"></div>
+  </div>
+
 
 </main>
 <body>
