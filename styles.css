@@ -33,6 +33,30 @@ h3 {
   margin: 0 0 10px;
   color: #4a4a46;
 }
+ .description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #6b6a63;
+  margin: 0 0 20px;
+}
+ 
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+ 
+.field {
+  flex: 1;
+  margin-bottom: 14px;
+}
+ 
+label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 4px;
+  color: #6b6a63;
+}
  
 
 
