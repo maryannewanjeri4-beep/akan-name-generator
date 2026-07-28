@@ -1,3 +1,12 @@
+// 1. data
+// 2. grab html elements
+// 3. listen for form submit
+// 4. validate function
+// 5. calculate function
+// 6. display function
+
+
+
 // arrays hold the names of every class
 const maleNames = ["Kwasi", "Kwadwo", "Kwabena", "Kwaku", "Yaw", "Kofi", "Kwame"];
 const femaleNames = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"];
@@ -8,4 +17,47 @@ const weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "F
 const resultBox = document.getElementById("result");
 const resultDay = document.getElementById("result-day");
 const resultName = document.getElementById("result-name");
+
+//EVENT LISTENER
+
+form.addEventListener("submit"), function (event) {
+ 
+  // Stop the page from refreshing, which is what forms do by default
+  event.preventDefault();
+  
+  const day = parseInt(document.getElementById("day").value);
+  const month = parseInt(document.getElementById("month").value);
+  const year = parseInt(document.getElementById("year").value);
+  const gender = document.getElementById("gender").value;
+ 
+  const inputIsValid = validateInput(day, month, year, gender);
+  if (inputIsValid === false) {
+    return;
+  }
+ 
+ 
+}
+
+//VALIDATION FUNCTION
+function validateInput(day, month, year, gender) {
+ if (isNaN(day) || day < 1 || day > 31) {
+    alert("Please enter a valid day between 1 and 31.");
+    return false;
+  }
+   if (isNaN(month) || month < 1 || month > 12) {
+    alert("Please enter a valid month between 1 and 12.");
+    return false;
+  }
+  if (isNaN(year) || year < 1000 || year > 9999) {
+    alert("Please enter a valid 4-digit year.");
+    return false;
+  }
+  if (gender === "") {
+    alert("Please select a gender.");
+    return false;
+  }
+ return true;
+}
+
+
  
